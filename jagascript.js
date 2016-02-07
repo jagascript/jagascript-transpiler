@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 const args = process.argv;
 const inputfile = args[2];
 const inputfileName = path.basename(inputfile, '.jaga')
@@ -10,9 +10,10 @@ if (inputExt !== 'jaga') {
   return;
 }
 
-fs.createReadStream(inputfile).pipe(fs.createWriteStream(`${inputfileName}.js`));
+fs.createReadStream(inputfile)
+  .pipe(fs.createWriteStream(`${inputfileName}.js`));
 
 function getExtension(filename) {
-    var ext = path.extname(filename||'').split('.');
-    return ext[ext.length - 1];
+  var ext = path.extname(filename||'').split('.');
+  return ext[ext.length - 1];
 }
