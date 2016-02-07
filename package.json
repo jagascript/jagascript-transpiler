@@ -1,6 +1,6 @@
 {
   "name": "jagascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command line tool to transpile jagascript files to javascript.",
   "main": "jagascript.js",
   "bin": {
