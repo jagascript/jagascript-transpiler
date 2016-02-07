@@ -1,4 +1,4 @@
-#!/usr/bin/env node 
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const args = process.argv;
@@ -8,7 +8,7 @@ const inputExt = getExtension(inputfile);
 
 if (inputExt !== 'jaga') {
   console.log('the provided file is not a valid jagascript file \nPlease provide a valid ".jaga" file');
-  return;
+  process.exit();
 }
 
 fs.createReadStream(inputfile)
